@@ -1,5 +1,5 @@
 #!/bin/bash -e
-
+apt install -y nfs-common
 # num of persistent volumes
 PV_COUNT=99
 

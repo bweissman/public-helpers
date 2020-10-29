@@ -30,3 +30,19 @@ systemctl status kubelet.service
 systemctl status docker.service 
 systemctl enable kubelet.service
 systemctl enable docker.service
+
+apt-get install -q -y ebtables ethtool
+apt-get install -q -y apt-transport-https
+tee /etc/docker/daemon.json <<EOF
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2"
+}
+EOF
+mkdir -p /etc/systemd/system/docker.service.d
+sudo systemctl daemon-reload
+sudo systemctl restart docker
