@@ -38,18 +38,18 @@ CUS=(
 ARCIMAGES=(
 	arc-sqlmi
 	arc-controller
-	mcr.microsoft.com/arcdata/arc-monitor-fluentbit
-	mcr.microsoft.com/arcdata/arc-monitor-telegraf
-	mcr.microsoft.com/arcdata/arc-monitor-collectd      
-	mcr.microsoft.com/arcdata/arc-postgres-12
-	mcr.microsoft.com/arcdata/arc-server-controller
-	mcr.microsoft.com/arcdata/arc-service-proxy
-	mcr.microsoft.com/arcdata/arc-bootstrapper
-	mcr.microsoft.com/arcdata/arc-control-watchdog
-	mcr.microsoft.com/arcdata/arc-monitor-kibana
-	mcr.microsoft.com/arcdata/arc-monitor-elasticsearch
-	mcr.microsoft.com/arcdata/arc-monitor-grafana
-	mcr.microsoft.com/arcdata/arc-monitor-influxdb            
+	arc-monitor-fluentbit
+	arc-monitor-telegraf
+	arc-monitor-collectd      
+	arc-postgres-12
+	arc-server-controller
+	arc-service-proxy
+	arc-bootstrapper
+	arc-control-watchdog
+	arc-monitor-kibana
+	arc-monitor-elasticsearch
+	arc-monitor-grafana
+	arc-monitor-influxdb            
 )
 for cu in "${CUS[@]}";
 do
@@ -61,6 +61,6 @@ do
 done
 for arcimage in "${ARCIMAGES[@]}";
 do
-    docker pull $DOCKER_REGISTRY/arcdata/$image:$ARCDOCKER_TAG
+    docker pull $DOCKER_REGISTRY/arcdata/$arcimage:$ARCDOCKER_TAG
 done
 
