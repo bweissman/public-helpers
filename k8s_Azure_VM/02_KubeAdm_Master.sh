@@ -2,8 +2,8 @@
 
 # Initialize a kubernetes cluster on the current node.
 #
-KUBE_VERSION=1.16.2
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
+KUBE_VERSION=1.16.3
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --kubernetes-version=$KUBE_VERSION
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config

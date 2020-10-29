@@ -26,3 +26,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 iptables -P FORWARD ACCEPT
+systemctl status kubelet.service 
+systemctl status docker.service 
+systemctl enable kubelet.service
+systemctl enable docker.service
