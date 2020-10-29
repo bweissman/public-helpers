@@ -3,7 +3,7 @@ set -Eeuo pipefail
 export DOCKER_REGISTRY="mcr.microsoft.com"
 export DOCKER_REPOSITORY="mssql/bdc"
 export DOCKER_TAG="2019-CU8-ubuntu-16.04"
-export ARCDOCKER_TAG="latest"
+export ARCDOCKER_TAG="public-preview-sep-2020"
 IMAGES=(
 	mssql-app-service-proxy
         mssql-control-watchdog
