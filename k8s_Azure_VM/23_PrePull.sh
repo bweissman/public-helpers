@@ -3,7 +3,8 @@ set -Eeuo pipefail
 export DOCKER_REGISTRY="mcr.microsoft.com"
 export DOCKER_REPOSITORY="mssql/bdc"
 export DOCKER_TAG="2019-CU8-ubuntu-16.04"
-export ARCDOCKER_TAG="public-preview-sep-2020"
+export ARCDOCKER_TAG="latest"
+#public-preview-sep-2020"
 IMAGES=(
 	mssql-app-service-proxy
         mssql-control-watchdog
@@ -58,7 +59,7 @@ for image in "${IMAGES[@]}";
 do
     docker pull $DOCKER_REGISTRY/$DOCKER_REPOSITORY/$image:$DOCKER_TAG
 done
-for arcimage in "${IMAGES[@]}";
+for arcimage in "${ARCIMAGES[@]}";
 do
     docker pull $DOCKER_REGISTRY/arcdata/$image:$ARCDOCKER_TAG
 done
