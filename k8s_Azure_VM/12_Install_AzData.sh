@@ -7,3 +7,4 @@ tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
 add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
 apt-get update
 apt-get install -y azdata-cli
+apt-get install -y mssql-tools unixodbc-dev
