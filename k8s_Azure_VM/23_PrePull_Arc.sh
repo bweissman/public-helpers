@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 export DOCKER_REGISTRY="mcr.microsoft.com"
 export DOCKER_REPOSITORY="mssql/bdc"
-export ARCDOCKER_TAG="latest"
+export ARCDOCKER_TAG="public-preview-dec-2020"
 ARCIMAGES=(
 	arc-sqlmi
 	arc-controller
