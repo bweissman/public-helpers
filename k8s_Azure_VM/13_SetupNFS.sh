@@ -3,7 +3,7 @@ apt install -y nfs-kernel-server
 mkdir -p /mnt/nfs_share
 chown -R nobody:nogroup /mnt/nfs_share/
 chmod 777 /mnt/nfs_share/
-echo '/mnt/nfs_share  10.10.0.0/16(rw,sync,no_subtree_check)' > exports
+echo '/mnt/nfs_share  10.10.0.0/16(rw,sync,no_subtree_check,no_root_squash)' > exports
 chmod 644 exports
 mv exports /etc/exports
 exportfs -a
