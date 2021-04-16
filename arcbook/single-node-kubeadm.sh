@@ -49,7 +49,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo apt-get install -q -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION
 sudo apt-mark hold kubelet kubeadm kubectl
-#curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | sudo bash
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3 | sudo bash
 . /etc/os-release
 if [ "$UBUNTU_CODENAME" == "bionic" ]; then
     modprobe br_netfilter
