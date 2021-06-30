@@ -7,7 +7,7 @@ KUBE_DPKG_VERSION=1.18.3-00
 KUBE_VERSION=1.18.3
 TIMEOUT=600
 RETRY_INTERVAL=5
-export PV_COUNT="80"
+export PV_COUNT="85"
 {
 sudo apt-get update -q
 sudo apt --yes install \
